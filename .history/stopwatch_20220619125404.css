@@ -1,0 +1,79 @@
+/* (A) CONTAINER */
+#stopwatch {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* (B) TIME */
+  #sw-time {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    background: rgb(63, 99, 139);
+    color: #fff;
+  }
+  
+  /* (C) BUTTONS */
+  #sw-rst, #sw-go {
+    box-sizing: border-box;
+    width: 50%;
+    cursor: pointer;
+    padding: 20px 0;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+  }
+  #sw-rst { background-color: #75acbd; }
+  #sw-go { background-color: #9fce97; }
+  
+  /* (X) DOES NOT MATTER */
+  /* PAGE & BODY */
+  body {
+    display: flex;
+    align-items: center; justify-content: center;
+    min-height: 100vh;
+    background: #1abc9c;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  * { font-family: arial, sans-serif; }
+  
+  /* WIDGET */
+  .widget-wrap {
+    min-width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .header {
+    padding: 100px;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  /* HEADER */
+  h1 { text-align: center; }
+  #code-boxx {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  /* FOOTER */
+  #code-boxx {
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  #code-boxx a {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    background: #d3adad;
+    color: #fff;
+  }

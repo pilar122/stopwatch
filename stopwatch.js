@@ -1,33 +1,33 @@
 var sw = {
-    // (A) PROPERTIES
+    // PROPERTIES
     etime : null, // html time display
     erst : null, // html reset button
     ego : null, // html start/stop button
     timer : null, // timer object
     now : 0, // current elapsed time
   
-    // (B) INITIALIZE
+    // INITIALIZE
     init : () => {
       // (B1) GET HTML ELEMENTS
       sw.etime = document.getElementById("sw-time");
       sw.erst = document.getElementById("sw-rst");
       sw.ego = document.getElementById("sw-go");
   
-      // (B2) ENABLE BUTTON CONTROLS
+      //  ENABLE BUTTON CONTROLS
       sw.erst.onclick = sw.reset;
       sw.ego.onclick = sw.start;
       sw.erst.disabled = false;
       sw.ego.disabled = false;
     },
   
-    // (C) START!
+    // START!
     start : () => {
       sw.timer = setInterval(sw.tick, 1000);
       sw.ego.value = "Stop";
       sw.ego.onclick = sw.stop;
     },
   
-    // (D) STOP
+    // STOP
     stop : () => {
       clearInterval(sw.timer);
       sw.timer = null;
@@ -35,7 +35,7 @@ var sw = {
       sw.ego.onclick = sw.start;
     },
   
-    // (E) TIMER ACTION
+    // TIMER ACTION
     tick : () => {
       // (E1) CALCULATE HOURS, MINS, SECONDS
       sw.now++;
@@ -47,14 +47,14 @@ var sw = {
       remain -= mins * 60;
       secs = remain;
   
-      // (E2) UPDATE THE DISPLAY TIMER
+      // UPDATE THE DISPLAY TIMER
       if (hours<10) { hours = "0" + hours; }
       if (mins<10) { mins = "0" + mins; }
       if (secs<10) { secs = "0" + secs; }
       sw.etime.innerHTML = hours + ":" + mins + ":" + secs;
     },
   
-    // (F) RESET
+    // RESET
     reset : () => {
       if (sw.timer != null) { sw.stop(); }
       sw.now = -1;
